@@ -3,15 +3,15 @@ import styled from 'styled-components'
 
 const Title = styled.h1`
   display: block;
-  font-size: 8em;
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
+  font-size: 6.5em;
+  letter-spacing: .25em;
 `
 const TabBox = styled.ul`
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
   list-style: none;
-  border: 1px solid blue;
 `
 const Tab = styled.li`
   display: flex;
@@ -21,6 +21,7 @@ const Tab = styled.li`
   margin: 0 0 20px 0;
 `
 const TabTail = styled.span`
+  position: relative;
   background: white;
   border: 3px solid;
   border-style: solid none solid solid;
@@ -33,40 +34,63 @@ const TabTail = styled.span`
 const Name = styled.strong`
   font-size: 2em;
   border: 3px solid;
-  font-size: 2em;
   border-radius: 0 3em 3em 0;
-  width: 14em;
+  width: 12em;
   padding: 7.5px;
   text-align: center;
+  text-transform: uppercase;
+`
+const Info = styled.section`
+  width: 80%;
+  border: 3px solid black;
+  margin: 15px auto 0;
+  padding: 15px;
+  height: 100px;
 `
 
 class NavMenu extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      name:
-      'File',
-      'Power',
-      'Arms',
-      'Guns',
-      'Styles',
-      'Trigger'
-    }
+    constructor(props){
+     super(props)
+     this.state = {
+        data: this.info
+     }
   }
-  render() {
-    return (
-      <div>
-        <Name></Name>
-        <TabBox>
-        { name.map(i = {
-          <Tab>
-          <TabTail/><Name/>
-          </Tab>
-        } )}
-        </TabBox>
-      </div>
-    )
+     info = [
+        {name: 'File', description: 'Defy the destiny of dark blood.'},
+        {name: 'Power', description: 'Surpass those who came before.'},
+        {name: 'Arms', description: 'Turn conquest into companionship.'},
+        {name: 'Guns', description: 'Learn the tools of the trade.'},
+        {name: 'Styles', description: 'Master all aspects of the self.'},
+        {name: 'Trigger', description: 'Unleash the true devil within.'}
+     ]
+     storySelect() {
+
+     }
+    render() {
+      const tabs = this.state.data
+      // <div key={item.id.toString()} onHover={this.showDescription}>
+      //       <h1 data-key={item.id.toString()}>{item.name}</h1>
+      //       <p>{item.description}</p>
+      //    </div>
+      return (
+        <div>
+          <Title>Status</Title>
+          <TabBox>
+          { tabs.map(
+            (item) => {
+            return <Tab key={ item.id }><TabTail/><Name>{ item.name }</Name></Tab>
+          }) }
+          </TabBox>
+          <Info>
+          { tabs.map(
+            (item) => {
+            return <p style={{
+              display: 'none'
+            }} key={ item.id }>{ item.description }</p>
+          }) }
+          </Info>
+        </div>
+      )
   }
 }
-
 export default NavMenu;

@@ -5,26 +5,37 @@ const Title = styled.h1`
   display: block;
   width: 100%;
   font-size: 4em;
+  text-align: right;
+  &:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 0 90px;
+    border-bottom: 15px solid green;
+    z-index: -2;
+  }
 `
 const Kiosk = styled.ul`
-  margin: 0 auto;
-  width: 80%;
-  list-style: none;
+  width: calc(47% - 30px);
+  height: 100%;
+  background: green;
 `
 const Selection = styled.li`
-  display: flex;
-  align-items: center;
-  justify-contents: center;
-  height: 3em;
-  margin: 0 0 20px 0;
+  color: #FFF;
+  font-size: 2.4em;
+  width: 40%;
+  padding: 7.5px;
+  text-transform: capitalize;
+  text-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 3px #000, 0px 0px 5px #000;
+  &:hover{
+    color: #FFB800;
+  }
 `
-const Repo = styled.section`
-  font-size: 1.3em;
-  width: 80%;
-  border: 3px solid black;
-  margin: 15px auto 0;
-  padding: 15px;
-  height: 100px;
+const Repo = styled(Kiosk)`
+  font-size: 1em;
+  overflow-y: auto;
 `
 
 class InfoKiosk extends Component {
@@ -35,12 +46,13 @@ class InfoKiosk extends Component {
      }
   }
      info = [
-        {name: 'File', description: 'Defy the destiny of dark blood.'},
-        {name: 'Power', description: 'Surpass those who came before.'},
-        {name: 'Arms', description: 'Turn conquest into companionship.'},
-        {name: 'Guns', description: 'Learn the tools of the trade.'},
-        {name: 'Styles', description: 'Master all aspects of the self.'},
-        {name: 'Trigger', description: 'Unleash the true devil within.'}
+        {
+        name: 'File',
+        description: [
+          'Test 1',
+          'Test II',
+          'Test 0--0'
+        ]},
      ]
      hoverState(){
        this.style.display = 'block'
@@ -54,20 +66,20 @@ class InfoKiosk extends Component {
       return (
         <div>
           <Title>Status</Title>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            height: '450px'
+          }}>
           <Kiosk>
             { tabs.map(
               (item) => {
-              return <Selection key={ item.id }>{ item.name }</Selection></Tab>
+              return <Selection key={ item.id }>{ item.name }</Selection>
             })}
           </Kiosk>
-          <Repo>
-          { tabs.map(
-            (item) => {
-            return <p style={{
-              display: 'none'
-            }} key={ item.id }>{ item.description }</p>
-          }) }
+          <Repo as='section'>
           </Repo>
+          </div>
         </div>
       )
   }

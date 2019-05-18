@@ -7,6 +7,8 @@ const Title = styled.h1`
   width: 80%;
   font-size: 6.5em;
   letter-spacing: .25em;
+  color: #FFF;
+  text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
 `
 const TabBox = styled.ul`
   margin: 0 auto;
@@ -22,8 +24,8 @@ const Tab = styled.li`
 `
 const TabTail = styled.span`
   position: relative;
-  background: white;
-  border: 3px solid;
+  background: #5E0000;
+  border: 3px solid #8E0000;
   border-style: solid none solid solid;
   display: block;
   left: 3px;
@@ -32,17 +34,26 @@ const TabTail = styled.span`
   z-index: 5;
 `
 const Name = styled.strong`
-  font-size: 2em;
-  border: 3px solid;
+  border: 3px solid #8E0000;
+  background: #5E0000;
+  font-size: 2.3em;
+  color: #FFF;
   border-radius: 0 3em 3em 0;
-  width: 12em;
+  width: 10em;
   padding: 7.5px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
+  &:hover{
+    color: #FFB800;
+  }
 `
 const Info = styled.section`
+  background: #5E0000;
+  border: 3px solid #8E0000;
+  color: #FFF;
+  font-size: 1.3em;
   width: 80%;
-  border: 3px solid black;
   margin: 15px auto 0;
   padding: 15px;
   height: 100px;
@@ -63,8 +74,8 @@ class NavMenu extends Component {
         {name: 'Styles', description: 'Master all aspects of the self.'},
         {name: 'Trigger', description: 'Unleash the true devil within.'}
      ]
-     storySelect() {
-
+     hoverState(){
+       this.style.display = 'block'
      }
     render() {
       const tabs = this.state.data

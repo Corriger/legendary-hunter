@@ -62,18 +62,7 @@ const Info = styled.section`
 class NavMenu extends Component {
     constructor(props){
      super(props)
-     this.state = {
-        data: this.info
-     }
   }
-     info = [
-        {name: 'File', description: 'Defy the destiny of dark blood.'},
-        {name: 'Power', description: 'Surpass those who came before.'},
-        {name: 'Arms', description: 'Turn conquest into companionship.'},
-        {name: 'Guns', description: 'Learn the tools of the trade.'},
-        {name: 'Styles', description: 'Master all aspects of the self.'},
-        {name: 'Trigger', description: 'Unleash the true devil within.'}
-     ]
      hoverState(){
        this.style.display = 'block'
      }
@@ -89,7 +78,7 @@ class NavMenu extends Component {
           <TabBox>
           { tabs.map(
             (item) => {
-            return <Tab key={ item.id }><TabTail/><Name>{ item.name }</Name></Tab>
+            return <Tab key={ this.props.id }><TabTail/><Name>{ this.props.name }</Name></Tab>
           }) }
           </TabBox>
           <Info>
@@ -97,7 +86,7 @@ class NavMenu extends Component {
             (item) => {
             return <p style={{
               display: 'none'
-            }} key={ item.id }>{ item.description }</p>
+            }} key={ this.props.id }>{ this.props.description }</p>
           }) }
           </Info>
         </div>

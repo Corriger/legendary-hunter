@@ -42,7 +42,8 @@ class InfoKiosk extends Component {
     constructor(props){
      super(props)
      this.state = {
-        data: this.info
+        data: this.info,
+        test: 'red'
      }
   }
      info = [
@@ -56,6 +57,26 @@ class InfoKiosk extends Component {
      ]
      hoverState(){
        this.style.display = 'block'
+     }
+     renderScreen(){
+       if(this.state.test == 'red'){
+         return (
+           // <MyFirstComponent/>
+           <p>Red Screen Component</p>
+         )
+       }else if(this.state.test == 'blue'){
+         return (
+           <p>Blue Screen Component</p>
+         )
+       }else if (this.state.test == 'green'){
+         return(
+           <p>Green Screen Component</p>
+         )
+       } else{
+         return (
+           <p>Default</p>
+         )
+       }
      }
     render() {
       const tabs = this.state.data
@@ -78,6 +99,10 @@ class InfoKiosk extends Component {
             })}
           </Kiosk>
           <Repo as='section'>
+            { this.renderScreen() }
+            <button onClick={ () => {this.setState({test: 'blue'})} } >Blue</button>
+            <button onClick={ () => {this.setState({test: 'Red'})} } >Red</button>
+            <button onClick={ () => {this.setState({test: 'green'})} } >green</button>
           </Repo>
           </div>
         </div>

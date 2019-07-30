@@ -10,13 +10,13 @@ const Return = styled.button`
 
 class App extends Component {
   toNav(){
-     
+
    }
 
   render() {
     return (
       <div className="App">
-        <Return onClick={toNav()}/>
+        <Return>
           Return
         </Return>
       </div>

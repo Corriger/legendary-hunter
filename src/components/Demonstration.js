@@ -29,7 +29,7 @@ class Demonstration extends Component {
     return (
       <div>
         <Demo style={{
-          background: ''
+          background: 'url(${  })'
         }}>
           <DemoImg src={}/>
           <DemoDesc as='p'>

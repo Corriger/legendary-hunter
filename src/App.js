@@ -8,15 +8,23 @@ import InfoKiosk from './components/InfoKiosk.js'
 // import Demonstration from './components/Demonstration.js'
 import './index.css'
 
+let fileNavItems = [
+  'statistics',
+  'appearance',
+  'personality',
+  'relationships',
+  'history',
+  'outfits'
+]
+let fileKioskItems
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <section className="container">
-          <InfoKiosk>
-
-          </InfoKiosk>
-        </section>
+          <InfoKiosk 
+          title='status'
+          items={fileNavItems}/>
       </div>
     )
   }

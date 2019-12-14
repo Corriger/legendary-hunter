@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import pageBG from './../assets/img/file-bg.jpg'
 
 const Title = styled.h1`
   display: block;
   width: 100%;
   font-size: 4em;
   text-align: right;
+  color: #FFF;
   &:after{
     position: absolute;
     content: "";
@@ -14,12 +16,12 @@ const Title = styled.h1`
     width: 100%;
     padding: 0 0 90px;
     border-bottom: 15px solid green;
-    z-index: -2;
+    z-index: 0;
   }
 `
 const Kiosk = styled.ul`
   width: calc(47% - 30px);
-  height: 100%;
+  height: 568px;
   background: green;
 `
 const Selection = styled.li`
@@ -41,19 +43,25 @@ const Repo = styled(Kiosk)`
 class InfoKiosk extends Component {
     render() {
       return (
-        <div>
-          <Title>Status</Title>
-          <div style={{
+        <div
+          className='component_container'
+          style={{
             display: 'flex',
-            justifyContent: 'space-around',
-            height: '450px'
-          }}>
+            flexFlow: 'row wrap',
+            justifyContent: 'space-evenly',
+            background: `url(${pageBG})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+        }}>
+          <Title>{this.props.title}</Title>
           <Kiosk>
-            
+            { this.props.items.map((item) => {
+              return <Selection>{ item }</Selection>
+            }) }
           </Kiosk>
           <Repo as='section'>
           </Repo>
-          </div>
         </div>
       )
   }

@@ -95,6 +95,7 @@ main {
   clear: both;
 }
 
+/* End Clearfix Hack */
 #root {
   width: 100%;
   height: 100%;
@@ -106,9 +107,9 @@ main {
 }
 
 .component_container {
-  /* background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; */
+  background-position: center;
   width: 100%;
   height: 100%;
 }

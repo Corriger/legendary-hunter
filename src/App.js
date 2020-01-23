@@ -22,8 +22,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <InfoKiosk 
-          title='status'
+          <InfoKiosk
+          title='file'
           items={fileNavItems}/>
       </div>
     )

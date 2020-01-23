@@ -5,23 +5,23 @@ import pageBG from './../assets/img/file-bg.jpg'
 const Title = styled.h1`
   display: block;
   width: 100%;
-  font-size: 4em;
+  font-size: 9em;
   text-align: right;
   color: #FFF;
-  &:after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 0 90px;
-    border-bottom: 15px solid green;
-    z-index: 0;
   }
 `
+const TitleLB = styled.div`
+  top: 30px;
+  width: 100%;
+  height: 15px;
+  background: green;
+`
 const Kiosk = styled.ul`
-  width: calc(47% - 30px);
-  height: 568px;
+  display: block;
+  float: left;
+  margin: 0 15px; 
+  width: calc(50% - 30px);
+  height: 60%;
   background: green;
 `
 const Selection = styled.li`
@@ -43,24 +43,22 @@ const Repo = styled(Kiosk)`
 class InfoKiosk extends Component {
     render() {
       return (
-        <div
-          className='component_container'
-          style={{
-            display: 'flex',
-            flexFlow: 'row wrap',
-            justifyContent: 'space-evenly',
-            background: `url(${pageBG})`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
+        <div 
+        className='component_container'
+        style={{
+          backgroundImage: this.props.bgImg
         }}>
-          <Title>{this.props.title}</Title>
-          <Kiosk>
+           <Title>{this.props.title}</Title>
+           <TitleLB/>
+          <Kiosk
+            className='cf'>
             { this.props.items.map((item) => {
               return <Selection>{ item }</Selection>
             }) }
           </Kiosk>
-          <Repo as='section'>
+          <Repo 
+            as='section' 
+            className='cf'>
           </Repo>
         </div>
       )

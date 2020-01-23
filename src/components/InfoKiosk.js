@@ -15,20 +15,22 @@ const Title = styled.h1`
     left: 0;
     width: 100%;
     padding: 0 0 90px;
-    border-bottom: 15px solid green;
+    border-bottom: 15px solid #5E0000;
     z-index: 0;
   }
 `
 const Kiosk = styled.ul`
-  width: calc(47% - 30px);
+  margin: 0 30px;
+  width: calc(47% - 60px);
   height: 568px;
-  background: green;
+  background: #5E0000;
 `
 const Selection = styled.li`
+  cursor: pointer;
   color: #FFF;
   font-size: 2.4em;
   width: 40%;
-  padding: 7.5px;
+  padding: 7.5px 7.5px 7.5px 30px;
   text-transform: capitalize;
   text-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 3px #000, 0px 0px 5px #000;
   &:hover{
@@ -48,7 +50,6 @@ class InfoKiosk extends Component {
           style={{
             display: 'flex',
             flexFlow: 'row wrap',
-            justifyContent: 'space-evenly',
             background: `url(${pageBG})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',

@@ -23,8 +23,8 @@ class App extends Component {
     return (
       <div className="App">
           <InfoKiosk 
-          title='status'
-          items={fileNavItems}/>
+            title='status'
+            items={fileNavItems}/>
       </div>
     )
   }

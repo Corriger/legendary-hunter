@@ -8,6 +8,10 @@ const Title = styled.h1`
   font-size: 9em;
   text-align: right;
   color: #FFF;
+  text-shadow: 1px 1px 1px #000, 
+  -1px 1px 1px #000, 
+  1px -1px 1px #000, 
+  -1px -1px 1px #000;
   }
 `
 const TitleLB = styled.div`
@@ -30,8 +34,11 @@ const Selection = styled.li`
   width: 40%;
   padding: 7.5px;
   text-transform: capitalize;
-  text-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 3px #000, 0px 0px 5px #000;
-  &:hover{
+  text-shadow: 1px 1px 1px #000, 
+  -1px 1px 1px #000, 
+  1px -1px 1px #000, 
+  -1px -1px 1px #000;
+  &:hover
     color: #FFB800;
   }
 `

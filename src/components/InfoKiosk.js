@@ -29,10 +29,11 @@ const Kiosk = styled.ul`
   background: green;
 `
 const Selection = styled.li`
+  cursor: pointer;
   color: #FFF;
   font-size: 2.4em;
   width: 40%;
-  padding: 7.5px;
+  padding: 7.5px 7.5px 7.5px 30px;
   text-transform: capitalize;
   text-shadow: 1px 1px 1px #000, 
   -1px 1px 1px #000, 

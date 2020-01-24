@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import pageBG from './../assets/img/file-bg.jpg'
+import Dumps from './Dumps.js'
 
 const Title = styled.h1`
   display: block;
@@ -23,8 +23,9 @@ const TitleLB = styled.div`
 const Kiosk = styled.ul`
   display: block;
   float: left;
-  margin: 0 15px; 
-  width: calc(50% - 30px);
+  margin: 0 15px;
+  padding: 15px;
+  width: calc(50% - 60px);
   height: 60%;
   background: green;
 `
@@ -54,7 +55,7 @@ class InfoKiosk extends Component {
         <div 
         className='component_container'
         style={{
-          backgroundImage: this.props.bgImg
+          backgroundImage: `url(${this.props.bgImg})`
         }}>
            <Title>{this.props.title}</Title>
            <TitleLB/>
@@ -65,8 +66,10 @@ class InfoKiosk extends Component {
             }) }
           </Kiosk>
           <Repo 
-            as='section' 
+            as='article' 
             className='cf'>
+              {/* <Dumps
+                summary={this.props.theInfo}/> */}
           </Repo>
         </div>
       )

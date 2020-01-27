@@ -1,21 +1,22 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const Return = styled.button`
+const Return = styled.a`
   display: block;
-  font-size: 2em;
-  text-align: right;
-  margin: 1em auto 0;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 auto;
+  clear: both;
+  color: #FFF;
+  &:hover{
+    font-size: 2.5em;
+  }
 `
 
 class App extends Component {
-  toNav(){
-
-   }
-
   render() {
     return (
-      <div className="App">
+      <div>
         <Return>
           Return
         </Return>

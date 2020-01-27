@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Dumps from './Dumps.js'
+import Stats from './Stats.js'
 
 const Title = styled.h1`
   display: block;
@@ -70,6 +71,9 @@ class InfoKiosk extends Component {
             className='cf'>
               {/* <Dumps
                 summary={this.props.theInfo}/> */}
+              <Stats
+                information={ this.props.information }
+                />
           </Repo>
         </div>
       )

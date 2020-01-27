@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Dumps from './Dumps.js'
 import Stats from './Stats.js'
+import Return from './Return.js'
 
 const Title = styled.h1`
   display: block;
@@ -19,7 +20,7 @@ const TitleLB = styled.div`
   top: 30px;
   width: 100%;
   height: 15px;
-  background: green;
+  background: #5E0000;
 `
 const Kiosk = styled.ul`
   display: block;
@@ -28,7 +29,7 @@ const Kiosk = styled.ul`
   padding: 15px;
   width: calc(50% - 60px);
   height: 60%;
-  background: green;
+  background: #5E0000;
 `
 const Selection = styled.li`
   cursor: pointer;
@@ -75,6 +76,7 @@ class InfoKiosk extends Component {
                 information={ this.props.information }
                 />
           </Repo>
+          <Return/>
         </div>
       )
   }

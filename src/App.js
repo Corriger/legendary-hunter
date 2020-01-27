@@ -17,35 +17,18 @@ let fileNavItems = [
   'outfits'
 ]
 let fileKioskItems = [
-  [
-    'name',
-    'd.o.b.',
-    'height',
-    'weight',
-    'blood type',
-    'species',
-    'title(s)',
-    'occupation',
-    'hobbies',
-    'likes',
-    'dislikes',
-    'alignment'
-  ],
-  [
-    'dante (née sparda)',
-    '09\/15\/1955',
-    '6\'6\"',
-    '216 lbs',
-    'AB\-',
-    'awakened cambion',
-    'legendary devil hunter, slayer, tony redgrave',
-    'paranormal mercenary, private investigator',
-    'none',
-    'his wife, the occasional fight, pizza, strawberry sundae',
-    'olives, smoking, blind ambition',
-    'true neutral'
-  ]
-
+['name','dante'],
+['title(s)','legendary devil hunter, slayer, redgrave'],
+['d.o.b.','09\/15\/1955'],
+['occupation','paranormal mercenary, private investigator'],
+['height','6\'6\"'],
+['hobbies','none'],
+['weight','216 lbs'],
+['likes','his wife, pizza, strawberry sundaes'],
+['blood type','AB-'],
+['dislikes','olives, smoking, ambition'],
+['species','awakened cambion'],
+['alignment','true neutral']
 ]
 
 class App extends Component {

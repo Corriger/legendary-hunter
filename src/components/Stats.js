@@ -9,17 +9,23 @@ const List = styled.ul`
   width: 100%;
 `
 const ListItem = styled.li`
+  color: #FF0000;
   display: block;
   padding: 0 0 15px;
-  width: 100%;
+  width: 50%;
 `
 const SupTitle = styled.em`
+  color: #FFF;
   vertical-align: super;
-  font-size: smaller;
+  font-size: 0.6666em;
+  font-weight: bold;
+  text-decoration: capitalize;
 `
 const Desc = styled.p`
   display: block;
   padding: 0 0 0 15px;
+  font-size: 1em;
+  text-decoration: capitalize;
 `
 
 class Stats extends Component {
@@ -28,13 +34,13 @@ class Stats extends Component {
       <div>
         <List>
           {this.props.information.map(
-            (items, i) => {
+            (infoPiece, i) => {
               return <ListItem>
                 <SupTitle>
-                  { items[0][i] }
+                  { infoPiece[0] }
                 </SupTitle>
                 <Desc>
-                  { items[1][i] }
+                  { infoPiece[1] }
                 </Desc>
               </ListItem>
             }

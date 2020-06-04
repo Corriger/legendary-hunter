@@ -10,10 +10,6 @@ class NavMenu extends Component {
      }
     render() {
       const tabs = this.state.data
-      // <div key={item.id.toString()} onHover={this.showDescription}>
-      //       <h1 data-key={item.id.toString()}>{item.name}</h1>
-      //       <p>{item.description}</p>
-      //    </div>
       return (
         <div>
           <Title>Status</Title>

@@ -6,18 +6,10 @@ class Stats extends Component {
     return (
       <div>
         <List>
-          {this.props.information.map(
-            (infoPiece, i) => {
-              return <ListItem>
-                <SupTitle>
-                  { infoPiece[0] }
-                </SupTitle>
-                <Desc>
-                  { infoPiece[1] }
-                </Desc>
-              </ListItem>
-            }
-          )}
+          <ListItem>
+            <SupTitle></SupTitle>
+            <Desc></Desc>
+          </ListItem>
         </List>
       </div>
     )

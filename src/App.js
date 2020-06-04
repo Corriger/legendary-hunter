@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 
 import InfoKiosk from './components/InfoKiosk.js'
-<<<<<<< HEAD
-=======
-// import Stats from './components/Stats.js'
-// import Return from './components/Return.js'
-// import Dumps from './components/Dumps.js'
->>>>>>> page-file
 import './index.css'
 import fileBG from './assets/img/file-bg.jpg'
 // import './assets/fonts/Requiem.tff'

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { PageTitle, Kiosk, Selection, Repo, Info, Return } from './styledCSS.js'
+import Info from './Info.js'
+import Return from './Return.js'
+import { PageTitle, Kiosk, Selection, Repo } from './styledCSS.js'
 import fileBG from './../assets/img/file-bg.jpg'
 
 class InfoKiosk extends Component {
@@ -14,7 +16,7 @@ class InfoKiosk extends Component {
             background: `url(${fileBG})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
+            backgroundPosition: 'center'
         }}>
           <PageTitle>{this.props.title}</PageTitle>
           <Kiosk>
@@ -25,9 +27,7 @@ class InfoKiosk extends Component {
           <Repo 
             as='article' 
             className='cf'>
-              <Info
-                information={ this.props.information }
-                />
+              <Info information={ this.props.information } />
           </Repo>
           <Return/>
         </div>

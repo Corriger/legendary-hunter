@@ -4,7 +4,9 @@ import { Return } from './styledCSS.js'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div style={{
+        width: '100%'
+      }}>
         <Return>
           Return
         </Return>

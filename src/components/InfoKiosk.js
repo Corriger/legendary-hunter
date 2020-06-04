@@ -10,12 +10,13 @@ class InfoKiosk extends Component {
           style={{
             display: 'flex',
             flexFlow: 'row wrap',
-            background: `url(${pageBG})`,
+            justifyContent: 'space-evenly',
+            background: `url(${fileBG})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
         }}>
-          <Title>{this.props.title}</Title>
+          <PageTitle>{this.props.title}</PageTitle>
           <Kiosk>
             { this.props.items.map((item) => {
               return <Selection>{ item }</Selection>

@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 // import NavMenu from './components/NavMenu.js'
 import InfoKiosk from './components/InfoKiosk.js'
-// import Stats from './components/Stats.js'
-// import Return from './components/Return.js'
-// import WeaponSelect from './components/WeaponSelect.js'
-// import Dumps from './components/Dumps.js'
-// import Demonstration from './components/Demonstration.js'
 import './index.css'
 
 let fileNavItems = [

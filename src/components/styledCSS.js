@@ -75,8 +75,10 @@ const PageTitle = styled.h1`
   }
 `
 const Kiosk = styled.ul`
+  padding: 45px 0;
   width: calc(47% - 60px);
-  height: 600px;
+  height: 50%;
+  max-height: 600px;
   background: #5E0000;
 `
 const Selection = styled.li`

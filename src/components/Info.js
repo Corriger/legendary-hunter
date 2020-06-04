@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { List, ListItem, SupTitle, Desc } from './styledCSS.js'
 
-class Stats extends Component {
+class Info extends Component {
   render() {
     return (
       <div>
@@ -16,4 +16,4 @@ class Stats extends Component {
   }
 }
 
-export default Stats
+export default Info

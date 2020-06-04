@@ -117,11 +117,20 @@ const Desc = styled.p`
   padding: 0 0 0 15px;
 `
 // Return Button
-const Return = styled.button`
+const Return = styled(Selection)`
+  cursor: pointer;  
   display: block;
+  padding: 0;
+  margin: 2em auto;
+  background: none;
+  text-align: center;
+  font-family: inherit;
   font-size: 2em;
-  text-align: right;
-  margin: 1em auto 0;
+  box-shadow: none;
+  border: none;
+  &:hover{
+    color: #FFB800;
+  }
 `
 
 export { Title, TabBox, Tab, TabTail, Name, Info, PageTitle, Kiosk, Selection, Repo, List, ListItem, SupTitle, Desc, Return }

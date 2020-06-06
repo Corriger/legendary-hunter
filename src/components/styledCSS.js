@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
-
+let colors = {
+  'backOne': '#5e0000',
+  'backTwo': '#9b0000',
+  'textTitle': '#fff',
+  'textBody': '#ff0000',
+  'hiLite': '#ffb800'
+}
 
 // Navigation Menu
 const Title = styled.h1`

@@ -6,10 +6,9 @@ class Info extends Component {
     return (
       <div>
         <List>
-          <ListItem>
-            <SupTitle></SupTitle>
-            <Desc></Desc>
-          </ListItem>
+          { this.props.information.map((item) => {
+            return  <ListItem><SupTitle>{ item[0] }</SupTitle> <Desc>{ item[1] }</Desc> </ListItem>
+            }) }
         </List>
       </div>
     )

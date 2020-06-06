@@ -64,7 +64,7 @@ const Info = styled.section`
 const PageTitle = styled.h1`
   width: 100%;
   text-align: right;
-  color: #FFF;
+  text-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 3px #000, 0px 0px 5px #000;
   &:after{
     position: absolute;
     content: "";

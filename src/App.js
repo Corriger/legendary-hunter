@@ -1,43 +1,20 @@
 import React, { Component } from 'react'
-
+import NavMenu from './components/NavMenu.js'
+import { fileNavItems, statistics, appearance } from './assets/data/file.js'
 import InfoKiosk from './components/InfoKiosk.js'
-import './index.css'
 import fileBG from './assets/img/file-bg.jpg'
-// import './assets/fonts/Requiem.tff'
-
-let fileNavItems = [
-  'statistics',
-  'appearance',
-  'personality',
-  'relationships',
-  'history',
-  'outfits'
-]
-let fileKioskItems = [
-['name','dante'],
-['title(s)','legendary devil hunter, slayer, redgrave'],
-['d.o.b.','09\/15\/1955'],
-['occupation','paranormal mercenary, private investigator'],
-['height','6\'6\"'],
-['hobbies','none'],
-['weight','216 lbs'],
-['likes','his wife, pizza, strawberry sundaes'],
-['blood type','AB-'],
-['dislikes','olives, smoking, ambition'],
-['species','awakened cambion'],
-['alignment','true neutral']
-]
+import './index.css'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
           <InfoKiosk
-            bgImg={ fileBG }
-            title='file'
-            items={ fileNavItems }
-            information={ fileKioskItems }
-            />
+            bg={fileBG}
+            title='File'
+            items={fileNavItems}
+            information={statistics}
+          />
       </div>
     )
   }

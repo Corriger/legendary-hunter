@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Info from './Info.js'
 import Return from './Return.js'
 import { PageTitle, Kiosk, Selection, Repo } from './styledCSS.js'
-import fileBG from './../assets/img/file-bg.jpg'
 
 class InfoKiosk extends Component {
     render() {
@@ -13,7 +12,7 @@ class InfoKiosk extends Component {
             display: 'flex',
             flexFlow: 'row wrap',
             justifyContent: 'space-evenly',
-            background: `url(${fileBG})`,
+            background: `url(${this.props.bg})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'

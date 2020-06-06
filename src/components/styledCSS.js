@@ -78,7 +78,7 @@ const PageTitle = styled.h1`
     left: 0;
     width: 100%;
     height: 100%;
-    border-bottom: 15px solid #5E0000;
+    border-bottom: 15px solid ${colors.backOne};
     z-index: 0;
   }
 `
@@ -87,7 +87,7 @@ const Kiosk = styled.ul`
   width: calc(47% - 60px);
   height: 50%;
   max-height: 600px;
-  background: #5E0000;
+  background: ${colors.backOne};
 `
 const Selection = styled.li`
   cursor: pointer;
@@ -98,7 +98,7 @@ const Selection = styled.li`
   text-transform: capitalize;
   text-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 3px #000, 0px 0px 5px #000;
   &:hover{
-    color: #FFB800;
+    color: ${colors.hiLite};
   }
 `
 const Repo = styled(Kiosk)`
@@ -141,7 +141,7 @@ const Return = styled(Selection)`
   box-shadow: none;
   border: none;
   &:hover{
-    color: #FFB800;
+    color: ${colors.hiLite};
   }
 `
 

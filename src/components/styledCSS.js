@@ -52,7 +52,7 @@ const Info = styled.section`
   background: #5E0000;
   border: 3px solid #8E0000;
   color: #FFF;
-  font-size: 3em;
+  font-size: 2em;
   width: 80%;
   margin: 15px auto 0;
   padding: 15px;

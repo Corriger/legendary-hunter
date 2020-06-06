@@ -66,7 +66,7 @@ const PageTitle = styled.h1`
   &:after{
     position: absolute;
     content: "";
-    top: 50%;
+    top: 25%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -107,8 +107,9 @@ const List = styled.ul`
 `
 const ListItem = styled.li`
   display: block;
+  margin: 0 auto;
   padding: 0 0 15px;
-  width: 100%;
+  width: 90%;
 `
 const SupTitle = styled.em`
   vertical-align: super;
@@ -116,7 +117,8 @@ const SupTitle = styled.em`
 `
 const Desc = styled.p`
   display: block;
-  padding: 0 0 0 15px;
+  padding: 0 0 0 1em;
+  color: red;
 `
 // Return Button
 const Return = styled(Selection)`

@@ -23,9 +23,7 @@ class InfoKiosk extends Component {
               return <Selection>{ item }</Selection>
             }) }
           </Kiosk>
-          <Repo 
-            as='article' 
-            className='cf'>
+          <Repo>
               <Info information={ this.props.information } />
           </Repo>
           <Return/>

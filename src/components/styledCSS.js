@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+
+
 // Navigation Menu
 const Title = styled.h1`
   display: block;
@@ -113,7 +115,7 @@ const ListItem = styled.li`
 `
 const SupTitle = styled.em`
   vertical-align: super;
-  font-size: smaller;
+  font-size: 0.75em;
 `
 const Desc = styled.p`
   display: block;

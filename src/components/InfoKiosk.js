@@ -31,4 +31,10 @@ class InfoKiosk extends Component {
       )
   }
 }
+Info.defaultProps = {
+  bg: '#000',
+  title: 'in progress',
+  items: 'tbd'
+};
+
 export default InfoKiosk;

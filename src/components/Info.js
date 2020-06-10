@@ -6,13 +6,16 @@ class Info extends Component {
     return (
       <div>
         <List>
-          { this.props.information.map((item) => {
-            return  <ListItem><SupTitle>{ item[0] }</SupTitle> <Desc>{ item[1] }</Desc> </ListItem>
+          { this.props.information.map((item, i) => {
+            return  <ListItem key={i}><SupTitle key={i + (Math.random() ** 2)}>{ item[0] }</SupTitle> <Desc key={i + (Math.random() ** 2)}>{ item[1] }</Desc> </ListItem>
             }) }
         </List>
       </div>
     )
   }
 }
+Info.defaultProps = {
+  information: ' '
+};
 
 export default Info

@@ -11,32 +11,29 @@ class App extends Component {
     this.textEventHandler = this.textEventHandler.bind(this)
     this.state = {
       data: File,
-      focusData: ' ',
-      currentData: ' '
+      currentData: File['statistics']
     }
   }
 
   textEventHandler(e){
     e = e.target.innerText
-    console.log(e)
+    console.log(File[`${e}`])
     return this.setState({
-      currentData: this.state.data.e
+      currentData: File[`${e}`]
     })
   }
 
   render() {
     const inFo = this.state.data
-    let infoCurrent = this.state.currentData
-    console.log(Object.keys(inFo))
-    console.log(infoCurrent)
+    console.log(inFo['statistics'])
     return (
       <div className="App">
           <InfoKiosk
-            inherit={this.textEventHandle}
+            inherit={this.textEventHandler}
             bg={fileBG}
             title='File'
-            items={inFo.fileNavItems}
-            information={Object.keys(infoCurrent)}
+            items={Object.keys(inFo)}
+            information={this.state.currentData}
           />
       </div>
     )

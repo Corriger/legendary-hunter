@@ -4,9 +4,6 @@ import Return from './Return.js'
 import { PageTitle, Kiosk, Selection, Repo } from './styledCSS.js'
 
 class InfoKiosk extends Component {
-  inheritFunction(){
-    return this.props.inherit
-  }
     render() {
       return (
         <div
@@ -23,7 +20,7 @@ class InfoKiosk extends Component {
           <PageTitle>{this.props.title}</PageTitle>
           <Kiosk>
             { this.props.items.map((item, i) => {
-              return <Selection onClick={ this.inherit } key={i}>{ item }</Selection>
+              return <Selection onClick={ this.props.inherit } key={i}>{ item }</Selection>
             }) }
           </Kiosk>
           <Repo>
@@ -35,9 +32,9 @@ class InfoKiosk extends Component {
   }
 }
 Info.defaultProps = {
-  bg: '#000',
-  title: 'in progress',
-  items: 'tbd'
+  bg: ['#000'],
+  title: ['in progress'],
+  items: ['tbd']
 };
 
 export default InfoKiosk;

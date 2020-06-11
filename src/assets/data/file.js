@@ -18,4 +18,4 @@ const appearance = [
     ['demeanor', 'placeholder number 3']
 ]
 
-export { fileNavItems, statistics, appearance }
+export { statistics, appearance }

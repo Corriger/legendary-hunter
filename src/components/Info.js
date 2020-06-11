@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { List, ListItem, SupTitle, Desc } from './styledCSS.js'
 
 class Info extends Component {
@@ -15,7 +16,7 @@ class Info extends Component {
   }
 }
 Info.defaultProps = {
-  information: ' '
+  infoDumps: []
 };
 
 export default Info

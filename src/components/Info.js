@@ -8,15 +8,16 @@ class Info extends Component {
       <div>
         <List>
           { this.props.information.map((item, i) => {
-            return  <ListItem key={i}><SupTitle key={i + (Math.random() ** 2)}>{ item[0] }</SupTitle> <Desc key={i + (Math.random() ** 2)}>{ item[1] }</Desc> </ListItem>
+            return <ListItem key={i}><SupTitle key={i + (Math.random() ** 2)}>{ item[0] }</SupTitle> <Desc key={i + (Math.random() ** 2)}>{ item[1] }</Desc> </ListItem>
             }) }
         </List>
       </div>
     )
   }
 }
-Info.defaultProps = {
-  infoDumps: []
-};
+
+Info.propTypes = {
+  information: PropTypes.array
+}
 
 export default Info

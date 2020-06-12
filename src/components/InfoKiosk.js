@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Info from './Info.js'
 import Return from './Return.js'
 import { PageTitle, Kiosk, Selection, Repo } from './styledCSS.js'
@@ -31,10 +32,11 @@ class InfoKiosk extends Component {
       )
   }
 }
-Info.defaultProps = {
-  bg: ['#000'],
-  title: ['in progress'],
-  items: ['tbd']
-};
+
+InfoKiosk.propTypes = {
+  inherit: PropTypes.func,
+  title: PropTypes.string,
+  items: PropTypes.array
+}
 
 export default InfoKiosk;

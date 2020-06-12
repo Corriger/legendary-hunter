@@ -14,25 +14,21 @@ class App extends Component {
       currentData: File['statistics']
     }
   }
-
   textEventHandler(e){
-    e = e.target.innerText
-    console.log(File[`${e}`])
+    e = e.target.textContent
     return this.setState({
       currentData: File[`${e}`]
     })
   }
 
   render() {
-    const inFo = this.state.data
-    console.log(inFo['statistics'])
     return (
       <div className="App">
           <InfoKiosk
             inherit={this.textEventHandler}
             bg={fileBG}
             title='File'
-            items={Object.keys(inFo)}
+            items={Object.keys(this.state.data)}
             information={this.state.currentData}
           />
       </div>

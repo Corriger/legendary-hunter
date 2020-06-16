@@ -57,7 +57,7 @@ html, body {
 
 a:link, a:visited, a:focus, a:active, a:hover, a {
   text-decoration: none;
-  font-size: initial;
+  font-size: inherit;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;

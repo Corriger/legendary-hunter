@@ -100,6 +100,9 @@ const Selection = styled.li`
   &:hover{
     color: ${colors.hiLite};
   }
+  &:active{
+    color: ${colors.hiLite}
+  }
 `
 const Repo = styled(Kiosk)`
   font-size: 1em;

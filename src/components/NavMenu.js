@@ -63,7 +63,7 @@ class NavMenu extends Component {
           <TabBox>
           { tabs.map(
             (item, i) => {
-            return <Tab key={i + (Math.random() ** 2)}><TabTail/><Name onMouseOver={this.hoverState}>{ this.state.tab[i] }</Name></Tab>
+            return <Tab key={i}><TabTail/><Name onMouseOver={this.hoverState} onClick={this.props.inherit}>{ this.state.tab[i] }</Name></Tab>
           }) }
           </TabBox>
           <Info>

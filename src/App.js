@@ -25,12 +25,13 @@ class App extends Component {
   navMenuClickEvent(e){
     e = e.target.innerText
     console.log(e)
-    return e == 'file' ? this.setState({
-      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={`${e}`} items={Object.keys(this.state.data[`${e}`])} information={this.state.currentData}/>
+    return e == 'File' ? this.setState({
+      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={`${e}`} items={Object.keys(this.state.data)} information={this.state.currentData}/>
     })
     : alert('in progress')
   }
   render() {
+    console.log(this.state.data)
     return (
       <div className="App">
         {this.state.currentComponent}

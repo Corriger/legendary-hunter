@@ -5,6 +5,8 @@ import InfoKiosk from './components/InfoKiosk.js'
 import fileBG from './assets/img/file-bg.jpg'
 import './index.css'
 
+let component = ''
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -18,20 +20,20 @@ class App extends Component {
   }
   textEventHandler(e){
     e = e.target.textContent
-    return this.setState({
-      currentData: this.props.title[`${e}`]
+    this.setState({
+      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={component} items={Object.keys(this.state.data)} information={File[`${e}`]}/>
     })
   }
   navMenuClickEvent(e){
     e = e.target.innerText
-    console.log(e)
-    return e == 'File' ? this.setState({
+    component = e
+    e === 'File' || 'Power' || 'Styles' ? this.setState({
       currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={`${e}`} items={Object.keys(this.state.data)} information={this.state.currentData}/>
     })
     : alert('in progress')
   }
   render() {
-    console.log(this.state.data)
+    console.log(component)
     return (
       <div className="App">
         {this.state.currentComponent}

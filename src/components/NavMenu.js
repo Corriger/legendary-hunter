@@ -1,93 +1,73 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  display: block;
-  margin: 0 auto;
-  width: 80%;
-  font-size: 6.5em;
-  letter-spacing: .25em;
-  color: #FFF;
-  text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
-`
-const TabBox = styled.ul`
-  margin: 0 auto;
-  width: 80%;
-  list-style: none;
-`
-const Tab = styled.li`
-  display: flex;
-  align-items: center;
-  justify-contents: center;
-  height: 3em;
-  margin: 0 0 20px 0;
-`
-const TabTail = styled.span`
-  position: relative;
-  background: #5E0000;
-  border: 3px solid #8E0000;
-  border-style: solid none solid solid;
-  display: block;
-  left: 3px;
-  height: 50%;
-  width: 6em;
-  z-index: 5;
-`
-const Name = styled.strong`
-  border: 3px solid #8E0000;
-  background: #5E0000;
-  font-size: 2.3em;
-  color: #FFF;
-  border-radius: 0 3em 3em 0;
-  width: 10em;
-  padding: 7.5px;
-  text-align: center;
-  text-transform: capitalize;
-  text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
-  &:hover{
-    color: #FFB800;
-  }
-`
-const Info = styled.section`
-  background: #5E0000;
-  border: 3px solid #8E0000;
-  color: #FFF;
-  font-size: 3em;
-  width: 80%;
-  margin: 15px auto 0;
-  padding: 15px;
-  height: 100px;
-`
+import { Title, TabBox, Tab, TabTail, Name, Info } from './styledCSS.js'
 
 class NavMenu extends Component {
-    constructor(props){
-     super(props)
-  }
-     hoverState(){
-       this.style.display = 'block'
-     }
+  constructor(props){
+    super(props)
+    // seems to bind a function to a specific... thingy
+    // this.hoverState is the VARIABLE you should be using; do not add ''()''
+    this.hoverState = this.hoverState.bind(this)
+    this.state = {
+       data: this.info,
+       tab: [
+         'file',
+         'power',
+         'arms',
+         'guns',
+         'להתעורר'
+       ],
+       currentHoverState: ''
+    }
+ }
+ info = [
+      'Defy the destiny of dark blood.',
+      'Surpass those who came before.',
+      'Conquer and command Hell itself.',
+      'Learn the tools of the trade.',
+      'Awaken to one\'s Reason.'
+    ]
+
+ hoverState(e){
+   e = e.target.innerText
+   let text = ''
+
+   switch (e){
+     case 'File':
+       text = this.state.data[0]
+     break
+     case 'Power':
+       text = this.state.data[1]
+     break
+     case 'Arms':
+       text = this.state.data[2]
+     break
+     case 'Guns':
+       text = this.state.data[3]
+     break
+     case 'להתעורר':
+       text = this.state.data[4]
+     break
+     default:
+       return null
+   }
+   // works technically as intended but keeps updating <li> too. need to fix that somehow
+   return this.setState(
+     {currentHoverState: text}
+   )
+ }
     render() {
       const tabs = this.state.data
-      // <div key={item.id.toString()} onHover={this.showDescription}>
-      //       <h1 data-key={item.id.toString()}>{item.name}</h1>
-      //       <p>{item.description}</p>
-      //    </div>
       return (
         <div>
           <Title>Status</Title>
           <TabBox>
           { tabs.map(
-            (item) => {
-            return <Tab key={ this.props.id }><TabTail/><Name>{ this.props.name }</Name></Tab>
+            (item, i) => {
+            return <Tab key={i}><TabTail/><Name onMouseOver={this.hoverState} onClick={this.props.inherit}>{ this.state.tab[i] }</Name></Tab>
           }) }
           </TabBox>
           <Info>
-          { tabs.map(
-            (item) => {
-            return <p style={{
-              display: 'none'
-            }} key={ this.props.id }>{ this.props.description }</p>
-          }) }
+           <p>{this.state.currentHoverState}</p>
           </Info>
         </div>
       )

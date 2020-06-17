@@ -7,7 +7,7 @@ class App extends Component {
       <div style={{
         width: '100%'
       }}>
-        <Return>
+        <Return onClick={this.props.return}>
           Return
         </Return>
       </div>

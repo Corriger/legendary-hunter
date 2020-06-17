@@ -27,7 +27,7 @@ class InfoKiosk extends Component {
           <Repo>
               <Info information={ this.props.information } />
           </Repo>
-          <Return/>
+          <Return return={this.props.return}/>
         </div>
       )
   }

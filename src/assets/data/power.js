@@ -27,13 +27,13 @@ const infernal = [
 ]
 
 const trigger = [
-    [``, `Dante can transform into a pseudo-devil form that, while not granting him any power than he does not already have, allows him to channel his power through a body better designed to facilitate it, letting him perform his normal feats much faster than usual and with far less conscious effort. His Devil Arms undergo a ‘merging’ of sorts so that its power and his become one. Weapons not demonic in nature are warped physically to better facilitate the channeling of his power.`],
-    [`Electrical Generation`, ``],
-    [`Levitation`, ``],
+    [`Devil Form`, `Dante can transform into a pseudo-devil form that, while not granting him any power than he does not already have, allows him to channel his power through a body better designed to facilitate it, letting him perform his normal feats much faster than usual and with far less conscious effort. His Devil Arms undergo a ‘merging’ of sorts so that its power and his become one. Weapons not demonic in nature are warped physically to better facilitate the channeling of his power.`],
+    [`Electrical Generation`, `lightning shooty arcs`],
+    [`Levitation`, `floaty flight bois`],
     [`Anatomical Liberation`, `placeholder text`],
     [`Chitinous Exoskeleton`, `placeholder number 2`],
     [`Razor Claws`, `placeholder number 3`],
-    [`Wing Manifestation`, ``]
+    [`Wing Manifestation`, `flap harder to go faster`]
 ]
 
 export { physical, psychological, skills, infernal, trigger }

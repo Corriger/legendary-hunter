@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NavMenu from './components/NavMenu.js'
-import { File, Power } from './assets/data/info-kiosk-data.js'
+import { File, Power, Styles } from './assets/data/info-kiosk-data.js'
 import InfoKiosk from './components/InfoKiosk.js'
 import './index.css'
 

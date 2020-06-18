@@ -12,6 +12,7 @@ class NavMenu extends Component {
        tab: [
          'file',
          'power',
+         'styles',
          'arms',
          'guns',
          'להתעורר'
@@ -22,6 +23,7 @@ class NavMenu extends Component {
  info = [
       'Defy the destiny of dark blood.',
       'Surpass those who came before.',
+      'Master the ways of Old and New.',
       'Conquer and command Hell itself.',
       'Learn the tools of the trade.',
       'Awaken to one\'s Reason.'

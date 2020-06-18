@@ -1,0 +1,39 @@
+const physical = [
+    [`Demon Physiology`, `For all intents and purposes, Dante's 'humanity' was killed by Sparda, leaving a vacancy for his demonic ancestry to take over his halfbreed physiology. He can completely subsist without food, water, or rest due to the sheer amount of demon power within him - though he still partakes out of habit - and is able to use its full capacity without the need to transform. He is able to best others of his species in strength, speed, and especially stamina without so much as breaking a sweat.`],
+    [`Temporal Protection`, `Fighting at the beginning of all space and time has cemented Dante's influence on chronology, and now a part of him exists where time has no influence. This makes him immune to alterations to whatever timeline he is a part of; paradoxes that would remove him from existence, age regression, and anything else that alters his temporal presence has no effect on him.`],
+    [`Indefinite Mortality`, `His self-restorative ability has become so potent as to render Dante ageless, leaving him incapable of suffering from disease and toxins that would wear away at others - even things that would poison high-ranking devils. Wounds inflicted on him heal just as quickly as they are made, the resulting discharge of shadow energy enough to disintegrate debris left in his body. Said energy is even enough to repair his clothing.`]
+]
+
+const psychological = [
+    [`Enhanced Senses`, `Dante’s five senses are greatly heightened, and he is able to pick up on minute differences in something as simple as the movement of the air around a person. Not only can he perceive it, but he can comb through the information his brain receives and formulate courses of action within that same moment with near-precognitive precision. He can see right through illusions and detect even the slightest differences in tone that can tip him off to whether or not they are who they say they are.`],
+    [`Mental Fortitude`, `Being a half-demon at birth and a full devil at present, Dante has been perpetually accosted by every sin known to Man. Temptation and mind control, as a result, have no effect on him. His mind is in a very... tumultuous state, both from being a devil and from having his own problems; as they say, ‘a good offense is a good defense’, and any that try to pry into his mind often find themselves being lost in the maelstrom within and going mad themselves.`],
+    [`Pain Suppression`, `Dante’s brain is wired differently in regards to registering physical contact and pain. One part of his mind registers pain, and the other parses through those electrical flares to determine where the pain originates and subtly adjusts the body’s posturing to allow for him to continue moving regardless of obstructions still present within the body.`],
+    [`Demonic Sense`, `There is an inherent wrongness with the existence of devils, and Dante has joined them in using this to his advantage. He can detect all of Infernal heritage right off the bat whether or not they reveal their true natures. Whether it is being harmonized with the destiny of all demons or something else entirely... they will not escape his sights.`],
+    [`Angelic Sense`, `Dante is a full devil in all but birth - thus he is far more sensitive to the presence of divine beings purely through the sense of discomfort or pain when they expose their true selves.`],
+
+]
+
+const skills = [
+    [`Weapons Proficiency`, `Dante went through grueling weapons training while growing up, becoming intimately familiar with the physics and mindsets that revolved around the mastery of his tools. Even without his demonic power he is an expert in using a variety of weaponry ranging from swords to polearms, nunchaku to tonfas, and even able to weaponize guitars and briefcases to a startlingly lethal degree. Whatever weapon he picks up, he is almost instantly capable of using it like a master.`],
+    [`Supernatural Marksmanship`, `With the combination of his demonic power and enhanced senses, Dante is outright godlike in his ability to take down his opponents with firearms. He’s able to ricochet bullets off of numerous surfaces to get his marks, stack bullet after bullet on top of one another while firing, hit his target without even looking at them - even at the earliest in his career, he was able to shoot a cue ball into several other pool balls into the various demons assaulting him in his office.`],
+    [`Hand-to-Hand Combat`, `Though his father left before his training was complete, Dante did not remain idle. Through intermediate training with kickboxing and karate and further practice on his own to exert the limits of his demonic heritage (read: watching a lot of kung fu movies), the hunter has become incredibly proficient in fighting unarmed. With a combination of strength and skill, he is able to defeat just about anything with his bare hands alone.`],
+    [`Investigative Proficiency`, `Stemming from his want for revenge against the devils that ruined his life, he had immersed himself in some of the most run-down areas in the United States and come to associate with plenty of slimy brokers and mercenaries - even more so when he decided to get his life in track with his Reason. Dante now has a well-tuned ability to comb through areas of interest and gleam details that many others would miss, and come to conclusions that aid in the completion of any tasks presented to him.`],
+]
+
+const infernal = [
+    [`Demonic Force`, `Infernal spawns are known for their power and ability to corrupt, but their presence alone is already something that goes against the laws of nature - some are simply more ‘aware’ of this fact than others, and the Sparda line was no exception. Dante is able to project this power through any physical medium he touches - even something as tiny as air particles, or as enigmatic as dark matter. The sheer amount of energy he is able to output not only makes the medium especially strong, but is also able to keep weaker matter held together until it reaches its target. When used through Devil Arms it massively amplifies the weapon set while allowing him to tap into the elemental aspect of the original demon. And of course, he can channel his power through his own body to amplify any aspect of his normal physical being.`],
+    [`Defiance`, `The very concept of the supernatural is that of something that goes beyond natural law; in the world of today, humans have come to understand certain things as ‘immutable’. That said, even these laws of the known world are merely ‘theories’ based on observations that humans themselves have placed into various controlled situations - thus inherently disrupting what could be considered ‘true naturalism’.`],
+    [``, `As a devil, Dante has the inherent ability to defy what is observed; reject one’s reality, as it were. As a human, he can exert his very will through this rejection of reality to go against any and every kind of supernatural entity that dares to threaten his world - even entities that manipulate concepts like silly putty.`]
+]
+
+const trigger = [
+    [``, `Dante can transform into a pseudo-devil form that, while not granting him any power than he does not already have, allows him to channel his power through a body better designed to facilitate it, letting him perform his normal feats much faster than usual and with far less conscious effort. His Devil Arms undergo a ‘merging’ of sorts so that its power and his become one. Weapons not demonic in nature are warped physically to better facilitate the channeling of his power.`],
+    [`Electrical Generation`, ``],
+    [`Levitation`, ``],
+    [`Anatomical Liberation`, `placeholder text`],
+    [`Chitinous Exoskeleton`, `placeholder number 2`],
+    [`Razor Claws`, `placeholder number 3`],
+    [`Wing Manifestation`, ``]
+]
+
+export { physical, psychological, skills, infernal, trigger }

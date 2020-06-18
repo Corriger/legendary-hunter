@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import NavMenu from './components/NavMenu.js'
-import * as File from './assets/data/file.js'
+import { File, Power } from './assets/data/info-kiosk-data.js'
 import InfoKiosk from './components/InfoKiosk.js'
-import fileBG from './assets/img/file-bg.jpg'
 import './index.css'
 
 let component = ''
@@ -14,7 +13,10 @@ class App extends Component {
     this.navMenuClickEvent = this.navMenuClickEvent.bind(this)
     this.return = this.return.bind(this)
     this.state = {
-      data: File,
+      data: {
+        File,
+        Power
+      },
       currentComponent: <NavMenu inherit={this.navMenuClickEvent}/>,
       currentData: File['statistics']
     }
@@ -28,19 +30,19 @@ class App extends Component {
   textEventHandler(e){
     e = e.target.textContent
     this.setState({
-      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={component} items={Object.keys(this.state.data)} information={File[`${e}`]} return={this.return}/>
+      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={`${component}-bg.jpg`} title={component} items={Object.keys(this.state.data[`${component}`])} information={this.state.data[`${component}`][`${e}`]} return={this.return}/>
     })
   }
   navMenuClickEvent(e){
     e = e.target.innerText
     component = e
+    console.log(component)
     e === 'File' || e === 'Power' || e === 'Styles' ? this.setState({
-      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={`${e}`} items={Object.keys(this.state.data)} information={this.state.currentData} return={this.return}/>
+      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={`${e}BG`} title={`${e}`} items={Object.keys(this.state.data[`${e}`])} information={this.state.currentData} return={this.return}/>
     })
     : alert('in progress')
   }
   render() {
-    console.log(component)
     return (
       <div className="App">
         {this.state.currentComponent}

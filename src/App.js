@@ -15,10 +15,12 @@ class App extends Component {
     this.state = {
       data: {
         File,
-        Power
+        Power,
+        Styles
       },
       currentComponent: <NavMenu inherit={this.navMenuClickEvent}/>,
-      currentData: File['statistics']
+      // need to figure out a less 'good bad bugs' way to handle this, but it works for now in satifying the props
+      currentData: Object.values(`${component}`)
     }
   }
   return(e){

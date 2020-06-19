@@ -1,7 +1,16 @@
 {
-  "main.css": "static/css/main.670efc6c.css",
-  "main.css.map": "static/css/main.670efc6c.css.map",
-  "main.js": "static/js/main.ab217b67.js",
-  "main.js.map": "static/js/main.ab217b67.js.map",
-  "static\\media\\file-bg.jpg": "static/media/file-bg.5b172ff3.jpg"
+  "main.css": "static/css/main.b48dee0d.css",
+  "main.css.map": "static/css/main.b48dee0d.css.map",
+  "main.js": "static/js/main.82561cb7.js",
+  "main.js.map": "static/js/main.82561cb7.js.map",
+  "static\\media\\ArmsBG.jpg": "static/media/ArmsBG.aac29bff.jpg",
+  "static\\media\\FileBG.jpg": "static/media/FileBG.5afa4f9c.jpg",
+  "static\\media\\FileFore.png": "static/media/FileFore.73eb1852.png",
+  "static\\media\\GunsBG.jpg": "static/media/GunsBG.3d64d10a.jpg",
+  "static\\media\\NavBoxImg.png": "static/media/NavBoxImg.14a2ad7b.png",
+  "static\\media\\PowerBG.jpg": "static/media/PowerBG.63fc8d10.jpg",
+  "static\\media\\PowerFore.png": "static/media/PowerFore.8248ba0d.png",
+  "static\\media\\StylesBG.jpg": "static/media/StylesBG.88e843e3.jpg",
+  "static\\media\\StylesFore.png": "static/media/StylesFore.c1b80b87.png",
+  "static\\media\\navBG.jpg": "static/media/navBG.4c2c5d43.jpg"
 }

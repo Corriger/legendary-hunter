@@ -4,7 +4,7 @@ let colors = {
   'backOne': '#3E0000',
   'backTwo': '#9b0000',
   'textTitle': '#fff',
-  'textBody': '#ff0000',
+  'textBody': '#a1fef9',
   'hiLite': '#ffb800'
 }
 

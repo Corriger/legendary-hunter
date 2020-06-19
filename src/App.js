@@ -12,7 +12,6 @@ import PowerFore from './assets/img/PowerFore.png'
 import StylesFore from './assets/img/StylesFore.png'
 import './index.css'
 
-console.log(FileFore)
 let component = ''
 
 class App extends Component {

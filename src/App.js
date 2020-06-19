@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 import NavMenu from './components/NavMenu.js'
 import { File, Power, Styles } from './assets/data/info-kiosk-data.js'
-import { FileBG, PowerBG, StylesBG, ArmsBG, GunsBG } from './assets/data/background.js'
-import { FileFore, PowerFore, StylesFore } from './assets/data/foreground.js'
 import InfoKiosk from './components/InfoKiosk.js'
+import FileBG from './assets/img/FileBG.jpg'
+import PowerBG from './assets/img/PowerBG.jpg'
+import StylesBG from './assets/img/StylesBG.jpg'
+import ArmsBG from './assets/img/ArmsBG.jpg'
+import GunsBG from './assets/img/GunsBG.jpg'
+import FileFore from './assets/img/FileFore.png'
+import PowerFore from './assets/img/PowerFore.png'
+import StylesFore from './assets/img/StylesFore.png'
 import './index.css'
 
+console.log(FileFore)
 let component = ''
 
 class App extends Component {
@@ -20,12 +27,12 @@ class App extends Component {
         Power,
         Styles
       },
-      background: { 
-        FileBG, 
-        PowerBG, 
-        StylesBG, 
-        ArmsBG, 
-        GunsBG 
+      background: {
+        FileBG,
+        PowerBG,
+        StylesBG,
+        ArmsBG,
+        GunsBG
       },
       foreground: { 
         FileFore, 
@@ -63,7 +70,7 @@ class App extends Component {
     e === 'File' || e === 'Power' || e === 'Styles' ? this.setState({
       currentComponent: <InfoKiosk 
       inherit={this.textEventHandler} 
-      bg={this.state.background[`${component}BG`]} 
+      bg={this.state.background[`${e}BG`]}
       title={`${e}`} 
       items={Object.keys(this.state.data[`${e}`])} 
       information={this.state.currentData} 

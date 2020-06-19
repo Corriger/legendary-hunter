@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import NavMenu from './components/NavMenu.js'
 import { File, Power, Styles } from './assets/data/info-kiosk-data.js'
+import { FileBG, PowerBG, StylesBG, ArmsBG, GunsBG } from './assets/data/background.js'
+import { FileFore, PowerFore, StylesFore } from './assets/data/foreground.js'
 import InfoKiosk from './components/InfoKiosk.js'
 import './index.css'
 
@@ -18,6 +20,18 @@ class App extends Component {
         Power,
         Styles
       },
+      background: { 
+        FileBG, 
+        PowerBG, 
+        StylesBG, 
+        ArmsBG, 
+        GunsBG 
+      },
+      foreground: { 
+        FileFore, 
+        PowerFore, 
+        StylesFore
+      },
       currentComponent: <NavMenu inherit={this.navMenuClickEvent}/>,
       // need to figure out a less 'good bad bugs' way to handle this, but it works for now in satifying the props
       currentData: Object.values(`${component}`)
@@ -32,15 +46,29 @@ class App extends Component {
   textEventHandler(e){
     e = e.target.textContent
     this.setState({
-      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={`${component}-bg.jpg`} title={component} items={Object.keys(this.state.data[`${component}`])} information={this.state.data[`${component}`][`${e}`]} return={this.return}/>
+      currentComponent: <InfoKiosk 
+      inherit={this.textEventHandler} 
+      bg={this.state.background[`${component}BG`]} 
+      title={component} 
+      items={Object.keys(this.state.data[`${component}`])} 
+      information={this.state.data[`${component}`][`${e}`]} 
+      fore={this.state.foreground[`${component}Fore`]} 
+      return={this.return}
+      />
     })
   }
   navMenuClickEvent(e){
     e = e.target.innerText
     component = e
-    console.log(component)
     e === 'File' || e === 'Power' || e === 'Styles' ? this.setState({
-      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={`${e}BG`} title={`${e}`} items={Object.keys(this.state.data[`${e}`])} information={this.state.currentData} return={this.return}/>
+      currentComponent: <InfoKiosk 
+      inherit={this.textEventHandler} 
+      bg={this.state.background[`${component}BG`]} 
+      title={`${e}`} 
+      items={Object.keys(this.state.data[`${e}`])} 
+      information={this.state.currentData} 
+      fore={this.state.foreground[`${e}Fore`]} 
+      return={this.return}/>
     })
     : alert('in progress')
   }

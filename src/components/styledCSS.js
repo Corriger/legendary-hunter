@@ -107,6 +107,17 @@ const Selection = styled.li`
 const Repo = styled(Kiosk)`
   font-size: 1em;
   overflow-y: auto;
+  &:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: ${props => props.fore};
+    background-size: 15%;
+    background-position: bottom right;
+  }
 `
 // Info
 const List = styled.ul`

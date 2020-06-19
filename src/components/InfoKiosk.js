@@ -24,7 +24,7 @@ class InfoKiosk extends Component {
               return <Selection onClick={ this.props.inherit } key={i}>{ item }</Selection>
             }) }
           </Kiosk>
-          <Repo>
+          <Repo fore={this.props.fore}>
               <Info information={ this.props.information } />
           </Repo>
           <Return return={this.props.return}/>

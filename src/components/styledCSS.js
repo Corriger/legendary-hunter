@@ -84,7 +84,7 @@ const PageTitle = styled.h1`
 `
 const Kiosk = styled.ul`
   padding: 45px 0;
-  width: calc(47% - 60px);
+  width: calc(45% - 30px);
   height: 50%;
   max-height: 600px;
   background: ${colors.backOne};
@@ -107,16 +107,21 @@ const Selection = styled.li`
 const Repo = styled(Kiosk)`
   font-size: 1em;
   overflow-y: auto;
-  &:after{
+  scrollbar-width: 10px;
+  scrollbar-color: #FF0000 #2E0000;
+  &:before{
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: ${props => props.fore};
-    background-size: 15%;
-    background-position: bottom right;
+    background: url(${props => props.fore});
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: bottom 1rem right 1rem;
+    opacity: .667;
+    z-index: 0;
   }
 `
 // Info

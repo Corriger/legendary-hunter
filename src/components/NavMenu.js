@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Title, TabBox, Tab, TabTail, Name, Info } from './styledCSS.js'
 import navBG from './../assets/img/navBG.jpg'
+import boxBG from './../assets/img/NavBoxImg.png'
 
 class NavMenu extends Component {
   constructor(props){
@@ -76,7 +77,7 @@ class NavMenu extends Component {
           backgroundPosition: 'bottom center'
       }}>
           <Title>Status</Title>
-          <TabBox>
+          <TabBox tabBox={boxBG}>
           { tabs.map(
             (item, i) => {
             return <Tab key={i}><TabTail/><Name onMouseOver={this.hoverState} onClick={this.props.inherit}>{ this.state.tab[i] }</Name></Tab>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Title, TabBox, Tab, TabTail, Name, Info } from './styledCSS.js'
+import navBG from './../assets/img/navBG.jpg'
 
 class NavMenu extends Component {
   constructor(props){
@@ -40,14 +41,17 @@ class NavMenu extends Component {
      case 'Power':
        text = this.state.data[1]
      break
-     case 'Arms':
+     case 'Styles':
        text = this.state.data[2]
      break
-     case 'Guns':
+     case 'Arms':
        text = this.state.data[3]
      break
-     case 'להתעורר':
+     case 'Guns':
        text = this.state.data[4]
+     break
+     case 'להתעורר':
+       text = this.state.data[5]
      break
      default:
        return null
@@ -60,7 +64,17 @@ class NavMenu extends Component {
     render() {
       const tabs = this.state.data
       return (
-        <div>
+        <div
+        className='component_container'
+        style={{
+          display: 'flex',
+          flexFlow: 'row wrap',
+          justifyContent: 'space-evenly',
+          background: `url(${navBG})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'bottom center'
+      }}>
           <Title>Status</Title>
           <TabBox>
           { tabs.map(

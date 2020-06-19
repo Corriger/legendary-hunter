@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 let colors = {
-  'backOne': '#5e0000',
+  'backOne': '#3E0000',
   'backTwo': '#9b0000',
   'textTitle': '#fff',
   'textBody': '#ff0000',
@@ -22,6 +22,10 @@ const TabBox = styled.ul`
   margin: 0 auto;
   width: 80%;
   list-style: none;
+  background: url(${props => props.tabBox});
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 `
 const Tab = styled.li`
   display: flex;
@@ -131,6 +135,7 @@ const List = styled.ul`
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow-y: auto;
 `
 const ListItem = styled.li`
   display: block;
@@ -140,12 +145,11 @@ const ListItem = styled.li`
 `
 const SupTitle = styled.em`
   vertical-align: super;
-  font-size: 0.75em;
 `
 const Desc = styled.p`
   display: block;
   padding: 0 0 0 1em;
-  color: red;
+  color: ${colors.textBody};
 `
 // Return Button
 const Return = styled(Selection)`

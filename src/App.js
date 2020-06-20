@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import NavMenu from './components/NavMenu.js'
-import * as File from './assets/data/file.js'
+import { File, Power, Styles } from './assets/data/info-kiosk-data.js'
 import InfoKiosk from './components/InfoKiosk.js'
-import fileBG from './assets/img/file-bg.jpg'
+import FileBG from './assets/img/FileBG.jpg'
+import PowerBG from './assets/img/PowerBG.jpg'
+import StylesBG from './assets/img/StylesBG.jpg'
+import ArmsBG from './assets/img/ArmsBG.jpg'
+import GunsBG from './assets/img/GunsBG.jpg'
+import FileFore from './assets/img/FileFore.png'
+import PowerFore from './assets/img/PowerFore.png'
+import StylesFore from './assets/img/StylesFore.png'
 import './index.css'
 
 let component = ''
@@ -14,9 +21,26 @@ class App extends Component {
     this.navMenuClickEvent = this.navMenuClickEvent.bind(this)
     this.return = this.return.bind(this)
     this.state = {
-      data: File,
+      data: {
+        File,
+        Power,
+        Styles
+      },
+      background: {
+        FileBG,
+        PowerBG,
+        StylesBG,
+        ArmsBG,
+        GunsBG
+      },
+      foreground: { 
+        FileFore, 
+        PowerFore, 
+        StylesFore
+      },
       currentComponent: <NavMenu inherit={this.navMenuClickEvent}/>,
-      currentData: File['statistics']
+      // need to figure out a less 'good bad bugs' way to handle this, but it works for now in satifying the props
+      currentData: Object.values(`${component}`)
     }
   }
   return(e){
@@ -28,19 +52,33 @@ class App extends Component {
   textEventHandler(e){
     e = e.target.textContent
     this.setState({
-      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={component} items={Object.keys(this.state.data)} information={File[`${e}`]} return={this.return}/>
+      currentComponent: <InfoKiosk 
+      inherit={this.textEventHandler} 
+      bg={this.state.background[`${component}BG`]} 
+      title={component} 
+      items={Object.keys(this.state.data[`${component}`])} 
+      information={this.state.data[`${component}`][`${e}`]} 
+      fore={this.state.foreground[`${component}Fore`]} 
+      return={this.return}
+      />
     })
   }
   navMenuClickEvent(e){
     e = e.target.innerText
     component = e
     e === 'File' || e === 'Power' || e === 'Styles' ? this.setState({
-      currentComponent: <InfoKiosk inherit={this.textEventHandler} bg={fileBG} title={`${e}`} items={Object.keys(this.state.data)} information={this.state.currentData} return={this.return}/>
+      currentComponent: <InfoKiosk 
+      inherit={this.textEventHandler} 
+      bg={this.state.background[`${e}BG`]}
+      title={`${e}`} 
+      items={Object.keys(this.state.data[`${e}`])} 
+      information={this.state.currentData} 
+      fore={this.state.foreground[`${e}Fore`]} 
+      return={this.return}/>
     })
     : alert('in progress')
   }
   render() {
-    console.log(component)
     return (
       <div className="App">
         {this.state.currentComponent}

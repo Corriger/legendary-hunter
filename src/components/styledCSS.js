@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 let colors = {
-  'backOne': '#5e0000',
+  'backOne': '#3E0000',
   'backTwo': '#9b0000',
   'textTitle': '#fff',
-  'textBody': '#ff0000',
+  'textBody': '#a1fef9',
   'hiLite': '#ffb800'
 }
 
@@ -22,6 +22,10 @@ const TabBox = styled.ul`
   margin: 0 auto;
   width: 80%;
   list-style: none;
+  background: url(${props => props.tabBox});
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 `
 const Tab = styled.li`
   display: flex;
@@ -84,7 +88,7 @@ const PageTitle = styled.h1`
 `
 const Kiosk = styled.ul`
   padding: 45px 0;
-  width: calc(47% - 60px);
+  width: calc(45% - 30px);
   height: 50%;
   max-height: 600px;
   background: ${colors.backOne};
@@ -107,6 +111,22 @@ const Selection = styled.li`
 const Repo = styled(Kiosk)`
   font-size: 1em;
   overflow-y: auto;
+  scrollbar-width: 10px;
+  scrollbar-color: #FF0000 #2E0000;
+  &:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(${props => props.fore});
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: bottom 1rem right 1rem;
+    opacity: .667;
+    z-index: 0;
+  }
 `
 // Info
 const List = styled.ul`
@@ -115,6 +135,7 @@ const List = styled.ul`
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow-y: auto;
 `
 const ListItem = styled.li`
   display: block;
@@ -124,12 +145,11 @@ const ListItem = styled.li`
 `
 const SupTitle = styled.em`
   vertical-align: super;
-  font-size: 0.75em;
 `
 const Desc = styled.p`
   display: block;
   padding: 0 0 0 1em;
-  color: red;
+  color: ${colors.textBody};
 `
 // Return Button
 const Return = styled(Selection)`

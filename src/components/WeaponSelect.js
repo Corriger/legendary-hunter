@@ -5,7 +5,16 @@ import Return from './Return.js'
 class InfoKiosk extends Component {
   render() {
     return (
-      <div>
+      <div className='component_container'
+      style={{
+        display: 'flex',
+        flexFlow: 'row wrap',
+        justifyContent: 'space-evenly',
+        background: `url(${this.props.bg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
+    }}>
         <article>
           <p></p>
         </article>

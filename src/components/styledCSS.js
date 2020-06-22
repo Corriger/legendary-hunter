@@ -142,6 +142,55 @@ const Desc = styled.p`
   padding: 0 0 0 1em;
   color: ${colors.textBody};
 `
+
+// Weapon Select Container
+const WeaponInfo = styled.article`
+  width: calc(45% - 30px);
+  height: 60%;
+  border: 6px double blue;
+`
+const WeaponList = styled.ul`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 60%;
+`
+const Prev = styled.li`
+  margin: 0 auto;
+  border-top: 0px solid transparent;
+  border-bottom: 30px solid blue;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+`
+const Next = styled(Prev)`
+  margin: 0 auto;
+  border-top: 30px solid blue;
+  border-bottom: 0px solid transparent;
+`
+const WeaponItem = styled.li`
+  display: flex;
+  padding: 0 45px;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  height: calc(30% - 30px);
+  border: 1px solid blue;
+  text-align: right;
+  border-radius: 30px 0 0 0;
+`
+const WepImg = styled.img`
+  width: 33%;
+  height: 100%;
+  background: black;
+  object-fit: contain;
+  object-position: center;
+`
+const WepName = styled.strong`
+  display: block;
+  font-size: 1.667em;
+`
+const WepTitle = styled(WepName)``
+
 // Return Button
 const Return = styled(Selection)`
   cursor: pointer;  
@@ -159,4 +208,4 @@ const Return = styled(Selection)`
   }
 `
 
-export { Title, TabBox, Tab, TabTail, Name, Info, PageTitle, Kiosk, Selection, Repo, List, ListItem, SupTitle, Desc, Return }
+export { Title, TabBox, Tab, TabTail, Name, Info, PageTitle, Kiosk, Selection, Repo, List, ListItem, SupTitle, Desc, WeaponInfo, Prev, Next, WeaponList, WeaponItem, WepImg, WepName, WepTitle, Return }

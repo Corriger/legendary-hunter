@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Return from './Return.js'
+import { PageTitle, WeaponInfo, Prev, Next, WeaponList, WeaponItem, WepImg, WepName, WepTitle } from './styledCSS.js'
 
 class InfoKiosk extends Component {
   render() {
@@ -15,34 +16,29 @@ class InfoKiosk extends Component {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center'
     }}>
-        <article>
+        <PageTitle>Arms</PageTitle>
+        <WeaponInfo>
           <p></p>
-        </article>
-        <ul>
-          <li class='prev'></li>
-          <li>
-            <img class='weapon' src='' alt='weapon 1' />
-            <div>
-              <strong>Test 1</strong>
-              <em>The Testening</em>
-            </div>
-          </li>
-          <li>
-            <img class='weapon' src='' alt='weapon 2' />
-            <div>
-              <strong>Test 2</strong>
-              <em>Akuma No Testo</em>
-            </div>
-          </li>
-          <li>
-            <img class='weapon' src='' alt='weapon 3' />
-            <div>
-              <strong>Test 3</strong>
-              <em>Tester's Awakening</em>
-            </div>
-          </li>
-          <li class='next'></li>
-        </ul>
+        </WeaponInfo>
+        <WeaponList>
+          <Prev></Prev>
+          <WeaponItem>
+            <WepImg src='' alt=''/>
+            <WepName>Test 1</WepName>
+            <WepTitle>The Testening</WepTitle>
+          </WeaponItem>
+          <WeaponItem>
+            <WepImg src='' alt=''/>
+            <WepName>Test 1</WepName>
+            <WepTitle>The Testening</WepTitle>
+          </WeaponItem>
+          <WeaponItem>
+            <WepImg src='' alt=''/>
+            <WepName>Test 1</WepName>
+            <WepTitle>The Testening</WepTitle>
+          </WeaponItem>
+          <Next></Next>
+        </WeaponList>
         <Return return={this.props.return} />
       </div>
     )

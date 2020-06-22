@@ -19,6 +19,18 @@ class InfoKiosk extends Component {
             backgroundPosition: 'center'
         }}>
           <PageTitle>{this.props.title}</PageTitle>
+          <span class={
+            {
+              display: 'block',
+              position: 'absolute',
+              top: '25%',
+              left: '0',
+              width: '100%',
+              height: '15px',
+              background: '#3E0000',
+              zIndex: '-3'
+            }
+          }></span>
           <Kiosk>
             { this.props.items.map((item, i) => {
               return <Selection onClick={ this.props.inherit } key={i}>{ item }</Selection>

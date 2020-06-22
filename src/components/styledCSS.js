@@ -75,17 +75,8 @@ const PageTitle = styled.h1`
   width: 100%;
   text-align: right;
   text-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 3px #000, 0px 0px 5px #000;
-  &:after{
-    position: absolute;
-    content: "";
-    top: 25%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-bottom: 15px solid ${colors.backOne};
-    z-index: 0;
-  }
 `
+// Info Kiosk Container
 const Kiosk = styled.ul`
   padding: 45px 0;
   width: calc(45% - 30px);

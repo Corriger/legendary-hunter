@@ -157,15 +157,16 @@ const WeaponList = styled.ul`
   height: 60%;
 `
 const Prev = styled.li`
+  cursor: pointer;
   margin: 0 auto;
   border-top: 0px solid transparent;
-  border-bottom: 30px solid blue;
+  border-bottom: 30px solid #FFF;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
 `
 const Next = styled(Prev)`
   margin: 0 auto;
-  border-top: 30px solid blue;
+  border-top: 30px solid #FFF;
   border-bottom: 0px solid transparent;
 `
 const WeaponItem = styled.li`
@@ -174,22 +175,32 @@ const WeaponItem = styled.li`
   flex-flow: column wrap;
   justify-content: space-evenly;
   height: calc(30% - 30px);
-  border: 1px solid blue;
+  border: 5px solid #200101;
+  background: ${colors.backOne};
   text-align: right;
   border-radius: 30px 0 0 0;
+  &:hover{
+    background: ${colors.backTwo}
+    border: 5px solid #FF0000;
+  }
 `
 const WepImg = styled.img`
   width: 33%;
   height: 100%;
-  background: black;
+  border: 1px solid green;
   object-fit: contain;
   object-position: center;
 `
 const WepName = styled.strong`
   display: block;
   font-size: 1.667em;
+  text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
 `
-const WepTitle = styled(WepName)``
+const WepTitle = styled(WepName)`
+  font-size: 1.334em;
+  font-style: italic;
+  text-shadow: 2px 2px 3px ${colors.textBody}
+`
 
 // Return Button
 const Return = styled(Selection)`

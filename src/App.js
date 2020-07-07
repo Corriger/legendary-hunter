@@ -79,10 +79,34 @@ class App extends Component {
     })
     : alert('in progress')
   }
+  setChange(e){
+    e = e.target.dataset.nav
+    switch (e){
+      case 'up':
+        console.log('previous')
+        break
+      case 'down':
+        console.log('next')
+        break
+    }
+  }
   render() {
     return (
       <div className="App">
-        {this.state.currentComponent}
+        {/* {this.state.currentComponent} */}
+        <WeaponSelect
+        bg={ArmsBG}
+        func={this.setChange}
+        imgOne={Arms['rebellion'][7]}
+        nameOne={Arms['rebellion'][0]}
+        titleOne={Arms['rebellion'][1]}
+        imgTwo={Arms['agniRudra'][7]}
+        nameTwo={Arms['agniRudra'][0]}
+        titleTwo={Arms['agniRudra'][1]}
+        imgThr={Arms['alastor'][7]}
+        nameThr={Arms['alastor'][0]}
+        titleThr={Arms['alastor'][1]}
+        />
       </div>
     )
   }

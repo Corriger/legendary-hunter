@@ -3,17 +3,15 @@ import NavMenu from './components/NavMenu.js'
 import { Arms } from './assets/data/weapon-select-data.js'
 import InfoKiosk from './components/InfoKiosk.js'
 import WeaponSelect from './components/WeaponSelect.js'
-import FileBG from './assets/img/FileBG.jpg'
-import PowerBG from './assets/img/PowerBG.jpg'
-import StylesBG from './assets/img/StylesBG.jpg'
 import ArmsBG from './assets/img/ArmsBG.jpg'
 import GunsBG from './assets/img/GunsBG.jpg'
-import FileFore from './assets/img/FileFore.png'
-import PowerFore from './assets/img/PowerFore.png'
-import StylesFore from './assets/img/StylesFore.png'
 import './index.css'
 
+// Object.entries(Arms[`rebellion`])
+console.log(Arms)
+
 let component = ''
+let count = 0
 
 class App extends Component {
   constructor(props){
@@ -21,23 +19,24 @@ class App extends Component {
     this.textEventHandler = this.textEventHandler.bind(this)
     this.navMenuClickEvent = this.navMenuClickEvent.bind(this)
     this.return = this.return.bind(this)
+    this.setChange = this.setChange.bind(this)
     this.state = {
       data: {
-        File,
-        Power,
-        Styles
+        // File,
+        // Power,
+        // Styles
       },
       background: {
-        FileBG,
-        PowerBG,
-        StylesBG,
+        // FileBG,
+        // PowerBG,
+        // StylesBG,
         ArmsBG,
         GunsBG
       },
       foreground: { 
-        FileFore, 
-        PowerFore, 
-        StylesFore
+        // FileFore, 
+        // PowerFore, 
+        // StylesFore
       },
       currentComponent: <NavMenu inherit={this.navMenuClickEvent}/>,
       // need to figure out a less 'good bad bugs' way to handle this, but it works for now in satifying the props

@@ -147,7 +147,6 @@ const Desc = styled.p`
 const WeaponInfo = styled.article`
   width: calc(45% - 30px);
   height: 60%;
-  border: 6px double blue;
 `
 const WeaponList = styled.ul`
   display: flex;
@@ -156,18 +155,13 @@ const WeaponList = styled.ul`
   width: 40%;
   height: 60%;
 `
-const Prev = styled.li`
+const Arrow = styled.li`
   cursor: pointer;
   margin: 0 auto;
-  border-top: 0px solid transparent;
-  border-bottom: 30px solid #FFF;
+  border-top: ${props => props.down ? '30px solid #FFF' : '0px solid transparent'};
+  border-bottom: ${props => props.down ? '0px solid transparent' : '30px solid #FFF'};
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-`
-const Next = styled(Prev)`
-  margin: 0 auto;
-  border-top: 30px solid #FFF;
-  border-bottom: 0px solid transparent;
 `
 const WeaponItem = styled.li`
   display: flex;
@@ -187,7 +181,6 @@ const WeaponItem = styled.li`
 const WepImg = styled.img`
   width: 33%;
   height: 100%;
-  border: 1px solid green;
   object-fit: contain;
   object-position: center;
 `
@@ -197,7 +190,7 @@ const WepName = styled.strong`
   text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
 `
 const WepTitle = styled(WepName)`
-  font-size: 1.334em;
+  font-size: 1.25em;
   font-style: italic;
   text-shadow: 2px 2px 3px ${colors.textBody}
 `
@@ -219,4 +212,4 @@ const Return = styled(Selection)`
   }
 `
 
-export { Title, TabBox, Tab, TabTail, Name, Info, PageTitle, Kiosk, Selection, Repo, List, ListItem, SupTitle, Desc, WeaponInfo, Prev, Next, WeaponList, WeaponItem, WepImg, WepName, WepTitle, Return }
+export { Title, TabBox, Tab, TabTail, Name, Info, PageTitle, Kiosk, Selection, Repo, List, ListItem, SupTitle, Desc, WeaponInfo, Arrow, WeaponList, WeaponItem, WepImg, WepName, WepTitle, Return }

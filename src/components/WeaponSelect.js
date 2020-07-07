@@ -17,26 +17,26 @@ class InfoKiosk extends Component {
     }}>
         <PageTitle>Arms</PageTitle>
         <WeaponInfo>
-          <p></p>
+          <p>{this.props.dump}</p>
         </WeaponInfo>
         <WeaponList>
-          <Prev></Prev>
+          <Arrow data-nav='up' onClick={this.props.func}></Arrow>
           <WeaponItem>
-            <WepImg src='' alt=''/>
-            <WepName>Test 1</WepName>
-            <WepTitle>The Testening</WepTitle>
+            <WepImg src={this.props.imgOne} alt={this.props.nameOne}/>
+            <WepName>{this.props.nameOne}</WepName>
+            <WepTitle>{this.props.titleOne}</WepTitle>
           </WeaponItem>
           <WeaponItem>
-            <WepImg src='' alt=''/>
-            <WepName>Test 1</WepName>
-            <WepTitle>The Testening</WepTitle>
+            <WepImg src={this.props.imgTwo} alt={this.props.nameTwo}/>
+            <WepName>{this.props.nameTwo}</WepName>
+            <WepTitle>{this.props.titleTwo}</WepTitle>
           </WeaponItem>
           <WeaponItem>
-            <WepImg src='' alt=''/>
-            <WepName>Test 1</WepName>
-            <WepTitle>The Testening</WepTitle>
+            <WepImg src={this.props.imgThr} alt={this.props.nameThr}/>
+            <WepName>{this.props.nameThr}</WepName>
+            <WepTitle>{this.props.titleThr}</WepTitle>
           </WeaponItem>
-          <Next></Next>
+          <Arrow down data-nav='down' onClick={this.setChange}></Arrow>
         </WeaponList>
         <Return return={this.props.return} />
       </div>

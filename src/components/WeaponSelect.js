@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Return from './Return.js'
-import { PageTitle, WeaponInfo, Prev, Next, WeaponList, WeaponItem, WepImg, WepName, WepTitle } from './styledCSS.js'
+import { PageTitle, WeaponInfo, Arrow, WeaponList, WeaponItem, WepImg, WepName, WepTitle } from './styledCSS.js'
 
 class InfoKiosk extends Component {
   render() {

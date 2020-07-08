@@ -1,4 +1,4 @@
-import * as Arms from './arms.js'
-// import * as Guns from './guns.js'
+import Arms from './arms.js'
+// import Guns from './guns.js'
 
 export { Arms }

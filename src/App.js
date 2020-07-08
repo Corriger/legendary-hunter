@@ -66,46 +66,62 @@ class App extends Component {
   navMenuClickEvent(e){
     e = e.target.innerText
     component = e
-    e === 'File' || e === 'Power' || e === 'Styles' ? this.setState({
-      currentComponent: <InfoKiosk 
-      inherit={this.textEventHandler} 
-      bg={this.state.background[`${e}BG`]}
-      title={`${e}`} 
-      items={Object.keys(this.state.data[`${e}`])} 
-      information={this.state.currentData} 
-      fore={this.state.foreground[`${e}Fore`]} 
-      return={this.return}/>
+    // e === 'File' || e === 'Power' || e === 'Styles' ? this.setState({
+    //   currentComponent: <InfoKiosk 
+    //   inherit={this.textEventHandler} 
+    //   bg={this.state.background[`${e}BG`]}
+    //   title={`${e}`} 
+    //   items={Object.keys(this.state.data[`${e}`])} 
+    //   information={this.state.currentData} 
+    //   fore={this.state.foreground[`${e}Fore`]} 
+    //   return={this.return}/>
+    // })
+    e === 'Arms' ? this.setState({
+      currentComponent: <WeaponSelect
+      bg={ArmsBG}
+      func={this.setChange}
+      wepOne={this.state.data[`${component}`][indexOne + count][0]} 
+      wepTwo={this.state.data[`${component}`][indexTwo + count][0]} 
+      wepThr={this.state.data[`${component}`][indexThr + count][0]}
+      imgOne={this.state.data[`${component}`][indexOne + count][7]} nameOne={this.state.data[`${component}`][indexOne + count][0]} titleOne={this.state.data[`${component}`][indexOne + count][1]}
+      imgTwo={this.state.data[`${component}`][indexTwo + count][7]} nameTwo={this.state.data[`${component}`][indexTwo + count][0]} titleTwo={this.state.data[`${component}`][indexTwo + count][1]}
+      imgThr={this.state.data[`${component}`][indexThr + count][7]} nameThr={this.state.data[`${component}`][indexThr + count][0]} titleThr={this.state.data[`${component}`][indexThr + count][1]}
+      />
     })
     : alert('in progress')
   }
   setChange(e){
     e = e.target.dataset.nav
     switch (e){
-      case 'up':
+      case 'up' && indexOne + count < component.length:
+      case 'up' && indexTwo + count < component.length:
+      case 'up' && indexThr + count < component.length:
         console.log('previous')
         break
-      case 'down':
+        case 'down' && indexOne + count > component.length:
+        case 'down' && indexTwo + count > component.length:
+        case 'down' && indexThr + count > component.length:
         console.log('next')
         break
+      default:
+        console.log('error')
     }
   }
   render() {
+    console.log(component)
     return (
       <div className="App">
-        {/* {this.state.currentComponent} */}
-        <WeaponSelect
+        {this.state.currentComponent}
+        {/* <WeaponSelect
         bg={ArmsBG}
         func={this.setChange}
-        imgOne={Arms['rebellion'][7]}
-        nameOne={Arms['rebellion'][0]}
-        titleOne={Arms['rebellion'][1]}
-        imgTwo={Arms['agniRudra'][7]}
-        nameTwo={Arms['agniRudra'][0]}
-        titleTwo={Arms['agniRudra'][1]}
-        imgThr={Arms['alastor'][7]}
-        nameThr={Arms['alastor'][0]}
-        titleThr={Arms['alastor'][1]}
-        />
+        wepOne={component[indexOne + count][0]} 
+        wepTwo={component[indexTwo + count][0]} 
+        wepThr={component[indexThr + count][0]}
+        imgOne={component[indexOne + count][7]} nameOne={component[indexOne + count][0]} titleOne={component[indexOne + count][1]}
+        imgTwo={component[indexTwo + count][7]} nameTwo={component[indexTwo + count][0]} titleTwo={component[indexTwo + count][1]}
+        imgThr={component[indexThr + count][7]} nameThr={component[indexThr + count][0]} titleThr={component[indexThr + count][1]}
+        /> */}
       </div>
     )
   }

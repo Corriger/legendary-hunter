@@ -21,22 +21,22 @@ class InfoKiosk extends Component {
         </WeaponInfo>
         <WeaponList>
           <Arrow data-nav='up' onClick={this.props.func}></Arrow>
-          <WeaponItem>
+          <WeaponItem onClick={this.props.inherit} data-weapon={this.props.wepOne}>
             <WepImg src={this.props.imgOne} alt={this.props.nameOne}/>
             <WepName>{this.props.nameOne}</WepName>
             <WepTitle>{this.props.titleOne}</WepTitle>
           </WeaponItem>
-          <WeaponItem>
+          <WeaponItem onClick={this.props.inherit} data-weapon={this.props.wepTwo}>
             <WepImg src={this.props.imgTwo} alt={this.props.nameTwo}/>
             <WepName>{this.props.nameTwo}</WepName>
             <WepTitle>{this.props.titleTwo}</WepTitle>
           </WeaponItem>
-          <WeaponItem>
+          <WeaponItem onClick={this.props.inherit} data-weapon={this.props.wepThr}>
             <WepImg src={this.props.imgThr} alt={this.props.nameThr}/>
             <WepName>{this.props.nameThr}</WepName>
             <WepTitle>{this.props.titleThr}</WepTitle>
           </WeaponItem>
-          <Arrow down data-nav='down' onClick={this.setChange}></Arrow>
+          <Arrow down data-nav='down' onClick={this.props.func}></Arrow>
         </WeaponList>
         <Return return={this.props.return} />
       </div>
